@@ -15,7 +15,7 @@ Although a lot of philosophical answers can be written to it, I like to summaris
 Speaking of teaching, I have immense respect for primary and pre-primary teachers. Handling those toddlers and their relentless energy feels like a diffcult task ot me. I remember an incident from the tragic day I took the risk to teach the kids Hour of Code, the queries raised were so innocent yet genuine that I couldn’t but just stare them in the face. “Bhaiya, why is this thing called A and not B?”   
 
 ###### Data 
-So here I am quoting an article from the recent report by the United Nations International Children’s Emergency Fund (UNICEF) education section. You can download the report here.(https://github.com/abhijeetsinghims/abhijeetsinghims.github.io/A-world-ready-to-learn-2019-eng.pdf)
+So here I am quoting an article from the recent report by the United Nations International Children’s Emergency Fund (UNICEF) education section. You can download the report [here.](https://github.com/abhijeetsinghims/abhijeetsinghims.github.io/A-world-ready-to-learn-2019-eng.pdf)
  
 
 P.S.: As I compile and create my observations, you are free to denote and suggest me changes on my email address at abhijeetsingh.ims@pm.me . 
