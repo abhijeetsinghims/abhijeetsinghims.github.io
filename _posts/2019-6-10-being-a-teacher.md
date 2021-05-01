@@ -3,6 +3,8 @@ layout: post
 title: Like, how difficult is to be a teacher 
 ---
 
+Being masterji 
+
 ##### About me
 ###### The pain called UGC NET 
 I still search for the day and the moment that I decided to pursue teaching. What seemed just like talking endlessly and bossing around students came at a cost. A senior professor once told me that “Abhijeet, teaching is a difficult thing to do. Take your choice wisely.” At that point, I thought he was being sarcastic or overly cautious. He was right. There is so much to study in management alone. I am trying really hard to focus and comprehend as much as I can. 
