@@ -3,6 +3,7 @@ layout: post
 title: Micro ERP System 
 ---
 
+I am proud to present a ERP system for free. 
 
 So here is the story. 
 Last month, my milkman told me that he wants to do upgrade his business and maintain hi-tech accounts like big shops and supermarkets, but his budget was limited. So here is where the idea stuck.
