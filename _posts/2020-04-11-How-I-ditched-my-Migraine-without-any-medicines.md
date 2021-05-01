@@ -4,6 +4,7 @@ title: How I ditched my Migraine without any medicines.
 ---
 
 Migraine is a havoc. It attacks at anytime and makes your irritating to others and useless for yourself. 
+
 I had been  suffering from migraine and other types of headaches from the last three years or so. Initially I din’t even knew it was migraine. I have a history with depression and I had fought it well as well (more on that story later)  so I  thought of this headache as a collinear effect. As all other symptoms of depression faded with treatment, headache stayed and made me irritable to the level of me pulling my own hair. I felt like a mad man. 
 Whenever I was free I tried work on getting it out, initially there seemed to be a dead end. Some friends and family told it will stay forever.  But I could not submit to it. How on earth will I live the rest of my life? Will this pain stay like this? There must be an answer.
 So I built my own concoction of herbal and homeopathic drugs after reading books, manuals and whatever literature I could get my hands on. 
