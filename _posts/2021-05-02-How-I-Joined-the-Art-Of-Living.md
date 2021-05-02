@@ -12,7 +12,7 @@ Next year when I got admission in IMS and moved to Indore. IMS was fun and even 
 
 One day I got late for dinner. As I entered the mess my nasal cavity detected the aroma of pure desi ghee. I zoomed in to find out the source. On the other end of the table a large guy had a small jar of ghee which he was hiding from others. My hands wanted to snatch the jar but i thought this jar will end and may be this huge gorilla-in-a-man would try to eat me. So lets leave the jar and get the guy.(Fundamentals of Managment: A good partner is far more worthy then a million bucks) From that very moment I stalked him. What his name was? Was he a senior or a batchmate. Fast enough I found his room and tried to talk to him. He was a senior so I wished him every now and then. But he would not talk. He was too shy to talk. So I did something nasty. By that time people knew me for the technical aspect and would call me every glitch that would occur to them. So I went ahead and disconnected his LAN cable from the network switch. In the evening, he was outside my room. I went with him and enacted some abracadabra and connected his cables. We became friends. MISSION ACCOMPLISHED.
 
-Everything was fine about him except that he used some kind of exercise before we went for dinner. Firstly I thought it was seasonal or temporal, but then I realized he would not give up. Here is piece from our conversation:
+Everything was fine about him except that he used to do some kind of exercise before we went for dinner. Firstly I thought it was seasonal or temporal, but then I realized he would not give up. Here is a piece from our conversation:
 
 _Sir yeh_ aap  roz roz _kya_ karte _ho?_
 
@@ -40,9 +40,9 @@ Now total cost that I may get 210*9 = 1890
 
 Savings with free ghee. = 1890-1250 = 640
 
-Immediately I called Devanshi and told them that I am doing this course.
+Immediately I called Devanshi (She is an AOL teacher now. One of the sweetest souls I know.) and told her that I am doing this course.
 
-After that, I did an advance course at the Bengaluru Ashram and pushed a number of people to do the course from family and friends namely Shruti Agrawal and Ashok Singh.AOL became so dear to me that this summer I have applied for the AOL internship and I am sure that will be fun again. It’s neither about moh maya nor about the gyan. AOL is super simple and easy. Its how to be happy. Gurudev got me by a spoon of ghee. You may find it funny, but it happened with me.
+After that, I did an advance course at the Bengaluru Ashram and pushed a number of people to do the course from family and friends namely Shruti Agrawal and Ashok Singh. AOL became so dear to me that this summer I have applied for the AOL internship and I am sure that will be fun again. It’s neither about moh maya nor about the gyan. AOL is super simple and easy. Its how to be happy. Gurudev got me by a spoon of ghee. You may find it funny, but it happened with me.
 
 On his birthday, an account of him being with me. Of the promise that he has made to all his disciples. Jai Gurudev. #theworldbelongstome #teramay
 
