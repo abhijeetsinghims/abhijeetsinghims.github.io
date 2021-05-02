@@ -44,6 +44,8 @@ Immediately I called Devanshi and told them that I am doing this course.
 
 After that, I did an advance course at the Bengaluru Ashram and pushed a number of people to do the course from family and friends namely Shruti Agrawal and Ashok Singh.AOL became so dear to me that this summer I have applied for the AOL internship and I am sure that will be fun again. It’s neither about moh maya nor about the gyan. AOL is super simple and easy. Its how to be happy. Gurudev got me by a spoon of ghee. You may find it funny, but it happened with me.
 
-On his birthday, an account of him being with me.Of the promise that he has made to all his disciples. Jai Gurudev. #theworldbelongstome #teramay
+On his birthday, an account of him being with me. Of the promise that he has made to all his disciples. Jai Gurudev. #theworldbelongstome #teramay
+
+For all those looking to join the Art Of Living, you can visit the site at [www.artofliving.org](https://www.artofliving.org). Start with happiness.
 
 ![Picture of Sri Sri Ravishankar](https://th.bing.com/th/id/R6e78966b6ffd91a8fa69532657273e88?rik=8wbCMYq/N/0JJw&riu=http://www.godwallpaper.in/wallpaper/M001/C036/SC066/large/Sri_Sri_Ravi_JiBAHR.jpg&ehk=PqdYW9iazyQU4%2bzaM3Hgh3wprWzzzLo3wSmAYpObi/4=&risl=&pid=ImgRaw)
