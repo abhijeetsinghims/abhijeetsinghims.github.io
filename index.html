@@ -66,15 +66,19 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
+								<form method="post" name="myemailform" action="contactform.php">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<input type="text" name="name" id="name" required/>
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
 											<input type="email" name="email" id="email" />
+										</div>
+                    <div class="field half">
+											<label for="Phone">Phone</label>
+											<input type="number" name="Phone" id="Phone" required/>
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
