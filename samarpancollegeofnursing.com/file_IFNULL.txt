@@ -1,0 +1,600 @@
+
+<html>
+<head>
+<LINK REL="SHORTCUT ICON" HREF="ADRRadiator.ico"> 
+<title>ADR Radiator - Detail Radiator</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"fdab653f42",applicationID:"850098"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+<html>
+<head>
+<title>ADR Radiator</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<!-- ImageReady Slices (head.psd) -->
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
+	<tr>
+    	<td background="images/head_01.jpg" style="width:50%; background-repeat:repeat-x;">
+			</td>
+		<td>
+			<img src="images/head_01.jpg" width="24" height="81" alt=""></td>
+		<td>
+			<img src="images/head_02.jpg" width="103" height="81" alt=""></td>
+		<td>
+			<img src="images/head_03.jpg" width="195" height="81" alt=""></td>
+		<td>
+			<img src="images/head_04.jpg" width="126" height="81" alt=""></td>
+		<td>
+			<img src="images/head_05.jpg" width="151" height="81" alt=""></td>
+		<td>
+			<img src="images/head_06.jpg" width="351" height="81" alt=""></td>
+	    <td background="images/head_01.jpg" style="width:100%; background-repeat:repeat-x;">
+			</td>
+    </tr>
+	</table>
+<!-- End ImageReady Slices -->
+</body>
+</html><script type="text/javascript" src="include/cyclomedia_ajax.js"></script>
+
+<LINK href="include/style.css" type=text/css rel=stylesheet>
+<script language="javascript" src="include/function_general.js"></script>
+
+
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="900" border="0" align="center">
+  <tr>
+    <td>&nbsp;
+        <table width="116" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="116"><div align="center">
+                <p> <span id="SpanBtnCmp" style="display:none">
+                  <button onclick="show_compare('','')" style="width:100px;text-align:center">
+                  <a> Comparison</a>
+                  </button>
+                </span> </p>
+              <p>
+                  <input type="submit" name="btnClose" id="btnClose" value="Close" onClick="window.close()" />
+                </p>
+            </div></td>
+          </tr>
+      </table></td>
+  </tr>
+</table>
+
+<script language="javascript">
+function show_compare(comp2,comp3)
+{
+	//alert(comp2);
+	//alert(comp3);
+	if(DivCompare.style.display=='none')
+	{
+		SpanImg0.style.display='block';
+		//SpanImg0a.style.display='block';
+		SpanImg1.style.display='block';
+		SpanImg2.style.display='block';	
+		SpanImg3.style.display='block';
+		SpanImg4.style.display='block';
+		SpanImg5.style.display='block';
+		SpanImg6.style.display='block';
+		DivCompare.style.display='block';
+		if(comp2!='') {
+			DivCompare6.style.display='block';
+		}
+		if(comp3!='') {
+			DivCompare7.style.display='block';
+		}
+	}
+	else
+	{
+		SpanImg0.style.display='none';
+		//SpanImg0a.style.display='none';
+		SpanImg1.style.display='none';
+		SpanImg2.style.display='none';	
+		SpanImg3.style.display='none';
+		SpanImg4.style.display='none';
+		SpanImg5.style.display='none';
+		SpanImg6.style.display='none';
+		DivCompare.style.display='none';
+		if(comp2!='') {
+			DivCompare6.style.display='none';
+		}
+		if(comp3!='') {
+			DivCompare7.style.display='none';
+		}
+	}
+	if(DivCompare1.style.display=='none')
+	{
+		SpanImg1.style.display='block';
+		SpanImg2.style.display='block';	
+//		SpanImg3.style.display='block';
+//		SpanImg4.style.display='block';
+//		SpanImg5.style.display='block';
+//		SpanImg6.style.display='block';
+		DivCompare1.style.display='block';
+	}
+	else
+	{
+		SpanImg1.style.display='none';
+		SpanImg2.style.display='none';	
+//		SpanImg3.style.display='none';
+//		SpanImg4.style.display='none';
+//		SpanImg5.style.display='none';
+//		SpanImg6.style.display='none';
+		DivCompare1.style.display='none';
+	}
+	if(DivCompare2.style.display=='none')
+	{
+		SpanImg1.style.display='block';
+		SpanImg2.style.display='block';	
+		DivCompare2.style.display='block';
+	}
+	else
+	{
+		SpanImg1.style.display='none';
+		SpanImg2.style.display='none';		
+		DivCompare2.style.display='none';
+	}
+	if(DivCompare3.style.display=='none')
+	{
+		SpanImg1.style.display='block';
+		SpanImg2.style.display='block';	
+		DivCompare3.style.display='block';
+	}
+	else
+	{
+		SpanImg1.style.display='none';
+		SpanImg2.style.display='none';		
+		DivCompare3.style.display='none';
+	}
+	if(DivCompare4.style.display=='none')
+	{
+		SpanImg1.style.display='block';
+		SpanImg2.style.display='block';	
+		DivCompare4.style.display='block';
+	}
+	else
+	{
+		SpanImg1.style.display='none';
+		SpanImg2.style.display='none';		
+		DivCompare4.style.display='none';
+	}
+	if(DivCompare5.style.display=='none')
+	{
+		SpanImg1.style.display='block';
+		SpanImg2.style.display='block';	
+		DivCompare5.style.display='block';
+	}
+	else
+	{
+		SpanImg1.style.display='none';
+		SpanImg2.style.display='none';		
+		DivCompare5.style.display='none';
+	}
+}
+</script>
+
+<table width="900" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
+	<tr> 
+    <td background="images/index_08.gif" width="50%" height="300" valign="top">&nbsp;</td>
+     <td background="images/index_09.gif" width="576" height="300" valign="top" colspan="2">
+         <table width="800" border="0" cellspacing="5">
+          <tr>
+            <td width="338" height="50">              </td>
+            <td width="50" rowspan="3" valign="top" style="padding-left:50px;"><span id="SpanImg0"><img src="images/bg-separator.png" style="background-repeat:repeat-y;"></span></td>
+            <td width="338"><span id="SpanImg1" style="display:none">
+                          
+            </span></td>
+          </tr>
+		  
+		  
+		  
+		  
+          <tr>
+            <td>
+            <img src="images_prod/3461-102911111111111111111111111111' UNION SELECT (select CONCAT(0x5b6464645d,IFNULL(cast(file_priv as char),0x20),0x5b6464645d) FROM mysql.user limit 0,1)--  .jpg" width="80%">
+                      </td>
+            <td><span id="SpanImg2" style="display:none"><img src="images_prod/.jpg" width="80%">
+                       </span></td>
+           
+             <td width="0"><span id="SpanImg3" style="display:none">
+           </span></td>
+            
+             <td width="0"><span id="SpanImg4" style="display:none">
+           </span></td>
+           
+             <td width="0"><span id="SpanImg5" style="display:none">
+           </span></td>
+           
+             <td width="0"><span id="SpanImg6" style="display:none">
+           </span></td>
+                     </tr>
+
+          <tr>
+            <td><br />
+                <div id="DivRadiator"><font color="#000000" size="+1"><strong>Radiator No. 3461-102911111111111111111111111111' UNION SELECT (select CONCAT(0x5b6464645d,IFNULL(cast(file_priv as char),0x20),0x5b6464645d) FROM mysql.user limit 0,1)--  </strong></font><br />
+                    <br />
+                    <table width="283" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+                      <tr>
+                        <td width="104"><strong>Core Size</strong></td>
+                        <td width="169">&nbsp;<br /></td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2">
+                        <table width="120" border="0">
+                          <tr>
+                            <td rowspan="2"><strong>Header Size</strong></td>
+                            <td><strong>Inlet</strong></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Outlet</strong></td>
+                          </tr>
+                        </table>                       </td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2"> <table width="120" border="0">
+                          <tr>
+                            <td rowspan="2"><strong>Hose Fittings</strong></td>
+                            <td><strong>Top</strong></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Bottom</strong></td>
+                          </tr>
+                        </table></td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td><strong>No of Rows</strong></td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Oil Cooler</strong></td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Remark</strong></td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </table>
+                </div></td>
+            <td><br />
+                <div id="DivCompare" style="display:none"><font color="#000000" size="+1"><strong>Radiator No.</strong></font><br />
+                    <br />            
+
+                    <table width="283" border="1" cellpadding="1" cellspacing="0" bordercolor="#999999">
+                      <tr>
+                        <td width="104"><strong>Core Size</strong></td>
+                        <td width="169">&nbsp;<br /></td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2">
+                        <table width="120" border="0">
+                          <tr>
+                            <td rowspan="2"><strong>Header Size</strong></td>
+                            <td><strong>Inlet</strong></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Outlet</strong></td>
+                          </tr>
+                        </table>                        </td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2"><table width="120" border="0">
+                          <tr>
+                            <td rowspan="2"><strong>Hose Fittings</strong></td>
+                            <td><strong>Top</strong></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Bottom</strong></td>
+                          </tr>
+                        </table></td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td><strong>No of Rows</strong></td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Oil Cooler</strong></td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Remark</strong></td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </table>
+            </div></td>
+            <td><br />
+                <div id="DivCompare6" style="display:none"><font color="#000000" size="+1"><strong>Radiator No.</strong></font><br />
+                    <br />            
+
+                    <table width="283" border="1" cellpadding="1" cellspacing="0" bordercolor="#999999">
+                      <tr>
+                        <td width="104"><strong>Core Size</strong></td>
+                        <td width="169">&nbsp;<br /></td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2">
+                        <table width="120" border="0">
+                          <tr>
+                            <td rowspan="2"><strong>Header Size</strong></td>
+                            <td><strong>Inlet</strong></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Outlet</strong></td>
+                          </tr>
+                        </table>                        </td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2"><table width="120" border="0">
+                          <tr>
+                            <td rowspan="2"><strong>Hose Fittings</strong></td>
+                            <td><strong>Top</strong></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Bottom</strong></td>
+                          </tr>
+                        </table></td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td><strong>No of Rows</strong></td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Oil Cooler</strong></td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Remark</strong></td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </table>
+            </div></td>
+            <td><br />
+                <div id="DivCompare7" style="display:none"><font color="#000000" size="+1"><strong>Radiator No.</strong></font><br />
+                    <br />            
+
+                    <table width="283" border="1" cellpadding="1" cellspacing="0" bordercolor="#999999">
+                      <tr>
+                        <td width="104"><strong>Core Size</strong></td>
+                        <td width="169">&nbsp;<br /></td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2">
+                        <table width="120" border="0">
+                          <tr>
+                            <td rowspan="2"><strong>Header Size</strong></td>
+                            <td><strong>Inlet</strong></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Outlet</strong></td>
+                          </tr>
+                        </table>                        </td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2"><table width="120" border="0">
+                          <tr>
+                            <td rowspan="2"><strong>Hose Fittings</strong></td>
+                            <td><strong>Top</strong></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Bottom</strong></td>
+                          </tr>
+                        </table></td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td><strong>No of Rows</strong></td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Oil Cooler</strong></td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Remark</strong></td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </table>
+            </div></td>
+            
+          </tr>
+        </table>
+
+      </td>
+		<td width="25%" valign="top">
+		</td>
+	</tr>
+	
+</table>
+
+
+<br><div align="center" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-weight:bold; font-size:14px;">Application<br><font color="#FF9933" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-style:italic; font-size:12px;">List sorted by Make Code ascending, Model Code ascending, Year descending, Engine Descending</font></div>
+<table width="900" border="0" align="center" cellspacing="1">
+	<tr><td valign="top">
+<table width="90%" border="1" align="center" cellpadding="2" cellspacing="0" id="Table_02a">
+	<thead>
+    	<td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Makes Desc</td>
+        <td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Model Desc</td>
+        <td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Year From</td>
+        <td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Year To</td>
+        <td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Engine</td>
+        <td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Description</td>
+        <td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Volume</td>
+    </thead>
+    	<tbody>
+    	<td colspan="7" style="color:#FF0000; font-style:italic; font-weight:bold;">data not available</td>
+    </tbody>
+    </table>
+
+
+	</td>
+    <td valign="top"><div id="DivCompare1" style="display:none">
+<table width="90%" border="1" align="center" cellpadding="2" cellspacing="0" id="Table_02b">
+	<thead>
+        <td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Makes Desc</td>
+        <td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Model Desc</td>
+        <td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Year From</td>
+        <td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Year To</td>
+        <td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Engine</td>
+        <td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Description</td>
+        <td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Volume</td>
+    </thead>
+    </table>
+<div style="color:#FF0000; font-style:italic; font-weight:bold;">
+data not available</div>
+	</div></td></tr>
+</table>
+<br><div align="center" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-weight:bold; font-size:14px;">OEM Cross Reference<br><font color="#FF9933" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-style:italic; font-size:12px;">List sorted by Make Code ascending, OEM No ascending</font></div>
+<table width="900" border="0" align="center" cellspacing="1">
+	<tr><td valign="top">
+<table width="90%" border="1" align="center" cellpadding="2" cellspacing="0" id="Table_03a">
+	<thead align="center">
+    	<td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">OEM No</td>
+        <td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Makes Desc</td>
+    </thead>
+    	<tbody>
+    	<td colspan="2" style="color:#FF0000; font-style:italic; font-weight:bold;">data not available</td>
+    </tbody>
+    </table>
+</td>
+    <td valign="top"><div id="DivCompare2" style="display:none">
+<table width="90%" border="1" align="center" cellpadding="2" cellspacing="0" id="Table_03b">
+	<thead align="center">
+    	<td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">OEM No</td>
+        <td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Makes Desc</td>
+    </thead>
+    </table>
+<div style="color:#FF0000; font-style:italic; font-weight:bold;">
+data not available</div>
+	</div></td></tr>
+</table>
+
+<br><div align="center" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-weight:bold; font-size:14px;">Other Manufacturer Cross Reference<br><font color="#FF9933" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-style:italic; font-size:12px;">List sorted by Manufacturer No ascending, Manufacturer Code ascending</font></div>
+<table width="900" border="0" align="center" cellspacing="1">
+	<tr><td valign="top">
+<table width="90%" border="1" align="center" cellpadding="2" cellspacing="0" id="Table_04a">
+	<thead>
+    	<td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Manufacturer No</td>
+        <td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Manufacturer Description</td>
+    </thead>
+    	<tbody>
+    	<td colspan="2" style="color:#FF0000; font-style:italic; font-weight:bold;">data not available</td>
+    </tbody>
+    </table>
+</td>
+    <td valign="top"><div id="DivCompare3" style="display:none">
+<table width="90%" border="1" align="center" cellpadding="2" cellspacing="0" id="Table_04b">
+	<thead>
+    	<td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Manufacturer No</td>
+        <td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Manufacturer Description</td>
+    </thead>
+    </table>
+<div style="color:#FF0000; font-style:italic; font-weight:bold;">
+data not available</div>
+	</div></td></tr>
+</table>
+<br><div align="center" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-weight:bold; font-size:14px;">Cross Reference<br><font color="#FF9933" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-style:italic; font-size:12px;">List sorted by Radiator No Ascending</font></div>
+<table width="900" border="0" align="center" cellspacing="1">
+	<tr><td valign="top">
+<table width="90%" border="1" align="center" cellpadding="2" cellspacing="0" id="Table_05a">
+	<thead>
+    	<td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Radiator No</td>
+    </thead>
+    	<tbody>
+    	<td style="color:#FF0000; font-style:italic; font-weight:bold;">data not available</td>
+    </tbody>
+    </table>
+</td>
+    <td valign="top"><div id="DivCompare4" style="display:none">
+<table width="90%" border="1" align="center" cellpadding="2" cellspacing="0" id="Table_05b">
+	<thead>
+    	<td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Radiator No</td>
+    </thead>
+    </table>
+<div style="color:#FF0000; font-style:italic; font-weight:bold;">
+data not available</div>
+	</div></td></tr>
+</table>
+<br><div align="center" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-weight:bold; font-size:14px;">Remarks<br><font color="#FF9933" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-style:italic; font-size:12px;">List sorted by Remarks Code Ascending</font></div>
+<table width="900" border="0" align="center" cellspacing="1">
+	<tr><td valign="top">
+<table width="90%" border="1" align="center" cellpadding="2" cellspacing="0" id="Table_06a">
+	<thead>
+    	<td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Remarks Description</td>
+    </thead>
+    	<tbody>
+    	<td style="color:#FF0000; font-style:italic; font-weight:bold;">data not available</td>
+    </tbody>
+    </table>
+</td>
+    <td valign="top"><div id="DivCompare5" style="display:none">
+<table width="90%" border="1" align="center" cellpadding="2" cellspacing="0" id="Table_06b">
+	<thead>
+        <td align="center" bgcolor="#0099FF" style="font-family:Tahoma; font-size:12px; color:#FFFFFF;">Remarks Description</td>
+    </thead>
+    </table>
+<div style="color:#FF0000; font-style:italic; font-weight:bold;">
+data not available</div>
+    </div></td></tr>
+</table>
+<script language='javascript'>
+SpanBtnCmp.style.display='none';
+SpanImg0.style.display='none';
+//SpanImg0a.style.display='none';
+SpanImg1.style.display='none';
+SpanImg2.style.display='none';
+SpanImg3.style.display='none';
+SpanImg4.style.display='none';
+SpanImg5.style.display='none';
+SpanImg6.style.display='none';
+DivCompare.style.display='none';
+</script>
+
+
+<br>
+<table width="100%" border="0" align="center" cellspacing="0" cellpadding="5">
+	<tr>
+    	<td align="left" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10px; "><br><hr><strong>ADR RADIATOR CROSS REFERENCE AND CATALOGUE DISCLAIMER</strong><br><br><p>ADR Radiators cross-references and catalogue is design to provide convenience and general guideline on an &quot;as is&quot; basis.</p>
+		  <p>ADR Radiators Manufacturers has taken great effort in trying to provide the cross-reference and catalogue on a best-effort basis.</p>
+		  <p>However, ADR Radiators Manufacturers does not guarantee the absolute accuracy of the data in any term, suggested implied or otherwise in printed, electronic, or any media, for any warranties of merchantability, fitness, or misapplication, directly, indirectly in part or wholely.<br>
+        </p></td>
+    </tr>
+	<tr>
+    	<td align="center" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-weight:bold; font-size:10px; background-image:url('images/bottom_14.jpg');">Copyright ©2012 - ADR Radiator. All Rights Reserved</td>
+    </tr>
+</table>
+<!--<div align="center" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-weight:bold; font-size:10px; background-image:url('images/bottom_14.jpg'); width:900px; padding:5px;">
+Copyright ©2012 - ADR Radiator. All Rights Reserved
+</div>
+-->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"fdab653f42","applicationID":"850098","transactionName":"MhBSZQoZWEJYURBbVgtaZUMRV1JUTVMNXmYXFFRYGQxZQxdCDEI=","queueTime":0,"applicationTime":6,"atts":"HldRE0IDS0w=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script></body>
+</html>

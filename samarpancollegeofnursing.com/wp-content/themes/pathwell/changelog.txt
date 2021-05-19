@@ -1,0 +1,32 @@
+﻿Version 1.1.2
+    Fixed:
+        - Compatibility with WP 5.1
+        - Plugins are updated to the latest versions
+        - Scripts libraries are updated
+
+Version 1.1.1
+    Added:
+        - WP GDPR Compliance plugin
+        - Alert to Demo data installation
+    Changed:
+        - Update demo data
+    Fixed:
+        - Compatibility with WP 5.0
+        - Update plugins to their latest versions
+        - Improve theme styles
+        - Update TRX Addons plugin
+    Removed:
+        - Support page, Video Tutorials page
+
+Version 1.1
+	Added:
+		- New block with contact phones on Homepage 1
+		- New block on Homepage 2 with contact phone and button linked to "Schedule a Tour" page
+		- New "Schedule a Tour" page 
+		- New Contact 7 form
+		
+	Fixed:
+		- Update documentation
+
+Version 1.0
+	Release

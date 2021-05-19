@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<title>RC비행기,RC헬기,RC카,비행기재료,발사,카본,부품 전문취급점(스카이하비)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+<META http-equiv="imagetoolbar" content="no">
+<meta name="keywords" content="알파모형과학,스카이하비,RC,무선모형,비행기,헬기,헬리콥터,자동차,엔진,RC비행기,RC헬기,RC카,RC보트,비행기재료,비행기부품,발사나무,카본봉,모터,변속기">
+<meta name="Description" content="알파모형과학,스카이하비,RC,무선모형,비행기,헬기,헬리콥터,자동차,엔진">
+<meta name="classification" content="알파모형과학,스카이하비,RC,무선모형,비행기,헬기,헬리콥터,자동차,엔진">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+<link rel="stylesheet" type="text/css" href="/css/Layout.css">
+<link href="/css/modal-window.css" type="text/css" rel="stylesheet" />
+
+<script language=javascript src="/js/common.js"></script>
+<script language=javascript src="/js/oksystem.js"></script>
+
+<script type="text/javascript" language="javascript" src="/js/jquery-1.6.4.js"></script>
+<script type="text/javascript" language="javascript" src="/js/modal-window.min.js"></script>
+<script type="text/javascript" language="javascript" src="/js/jquery.cycle.all.latest.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.slideshow').css("display","block");
+    $('.slideshow').cycle({
+		fx: 'scrollUp' // choose your transition type, ex: fade, scrollUp, shuffle, zoom,etc...
+	});
+
+	$('.search_slideshow').css("display","block");
+    $('.search_slideshow').cycle({
+		fx: 'scrollUp' // choose your transition type, ex: fade, scrollUp, shuffle, zoom,etc...
+	});
+	
+});
+</script>
+
+
+
+</head>
+
+
+
+<div id="ifrm"><iframe name="h_ifrm" src="/body/blank.asp" frameborder="0" width="0" height="0"></iframe></div>
+<div id="main_topsection"><!-- 탑 상단메뉴 -->
+
+
+
+					<table width="955px" height="24" border="0" cellspacing="0" cellpadding="0" align="center">
+					  <tr>
+					    <td style="padding-left:10px;">
+						    <table width="100" height="20" border="0" cellspacing="0" cellpadding="0">
+							  <tr align="center">
+								<td class="stext2"><a href="/index.asp">HOME</a></td>
+								<td class="stext2" width="10px" align="center">|</td>
+								 
+								<td class="stext2"><a href="javascript:AddBookmark();">즐겨찾기</a></td>
+
+							  </tr>
+							 </table>
+						</td>
+					    <td align="right">							
+							
+							<table width="490" height="20" border="0" cellspacing="0" cellpadding="0">
+							 <tr align="center">
+								<td class="stext2" style="width:60px;"><span class="bg_icon" style="background-color: #b7005b; "><a style="color: #FFFFFF"  href="javascript:login('/product/product_list.asp?ac_type=1&ac_number=216111111111111111111111111111%20UNION%20SELECT%20char%2891%29%2Bchar%2888%29%2Bchar%2893%29%2B%28%2F%2A%2A%2FcAsT%28%40%40version%20as%20char%29%29%2Bchar%2891%29%2Bchar%2888%29%2Bchar%2888%29%2Bchar%2893%29');">로그인</a></span></td>
+								<td class="stext2" style="width:50px;"><a href="/profile/profile_step_1.asp">회원가입</a></td>
+								<td class="stext2" width="10px" align="center">|</td>
+								<td class="stext2" style="width:100px;"><a href="javascript:popupLayer('아이디찾기','/login/login_id_search.asp',550,450)">아이디/패스워드찾기</a></td>
+								<td class="stext2" width="10px" align="center">|</td>
+								<td class="stext2" style="width:40px;font-weight: bold;"><a href="/profile/profile_main.asp"><b>내정보</b></a></td>
+								<td class="stext2" width="10px" align="center">|</td>
+								<td class="stext2" style="width:60px;font-weight: bold;"><a href="/profile/profile_order_check.asp"><b>내쇼핑정보</b></a></td>
+								<td class="stext2" width="10px" align="center">|</td>
+								<td class="stext2" style="width:50px;"><a href="/product_cart/product_cart_list.asp">장바구니</a></td>
+								<td class="stext2" width="10px" align="center">|</td>
+								<td class="stext2" style="width:60px;font-weight: bold;"><a href="/center/center_main.asp">고객센터</a><span style="font-family:'굴림','Verdana','돋움'; font-size:8px;color:#777777; letter-spacing:-1px;padding-left:5px;">▼</span></td>
+							  </tr>
+							</table>
+							
+						</td>
+					   </tr>
+					   <tr>
+					      <td bgcolor="#d7d7d7" height="1"></td>
+					   </tr>
+					</table>
+		</div>
+
+		<script language="javascript">
+			<!--
+			 cat_menu("YES");
+			  -->
+		  </script>
+
+<div id="maincontainer"><!-- maincontainer START 상단메뉴 -->
+
+
+  	    <div id="topsection"><!-- 단메뉴 -->
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="80px" style="margin-top:10px">
+<tr>
+	<td style="width:180px">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td><a href="/"><img src="/top_menu/top_menu_img/logo.gif"></a></td>
+	</tr>
+	<tr>
+		<td><img src="/top_menu/top_menu_img/manubar_s.gif"></td>
+	</tr>
+	</table></td>
+	<td>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="height:43px; vertical-align: bottom;">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td style="padding-left: 50px;width:180px"><a href="/board_frm/board.asp?BoardName=BOARD_review&CodeName=review_10">SINCE 1991</a></td>
+			<td style="padding-left: 50px;width:300px"><a href="/board_frm/board.asp?BoardName=BOARD_praise&CodeName=praise_10">30만원이상 결제시 4%추가할인</a></td>
+			<td style="padding-left: 50px;width:300px"><a href="/center/content_view.asp?content_number=370">24시 방문수령가능 디지털금고서비스</a></td>
+		</tr>
+		</table>
+		
+		</td>
+	</tr>
+	<tr>
+		<td style="height:36px;width:100%">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" height="36px">
+			<tr>
+				<td style="width:30px;  background: url(/top_menu/top_menu_img/menubr_bg_1.gif) no-repeat;">&#160;</td>
+				<td class="menuBar1"><a href="/company/company.asp"><font  face="맑은 고딕" color="black">회사소개</font></a></td>
+				<td class="menuBar1"><a href="/dongho_s/dongho_s_list.asp?gotopage=1&dongho_s_a_class_number=&dongho_s_b_class_number=&dongho_s_c_class_number="><font  face="맑은 고딕" color="black">오프라인</font></a></td>
+				<td class="menuBar1"><a href="/Center/center_main.asp"><font face="맑은 고딕" color="black">고객센터</font></a></td>
+				<td class="menuBar1"><a href="/center/content_list.asp"><font face="맑은 고딕" color="black">공지사항</font></a></td>
+				<td class="menuBar1" style="padding-right:20px"><a href="/board_ajax/board_summary.asp"><font face="맑은 고딕" color="black">자료실</font></a></td>
+				<td align="right" width="84px"><a href="/product/product_jg_list.asp?ac_type=2"><img src="/top_menu/top_menu_img/menu_1.gif"></a></td>
+				<td align="right" width="96px"><a href="/as/as_product_main.asp"><img src="/top_menu/top_menu_img/menu_2.gif"></a></td>
+				<td align="right" width="91px"><a href="/years_product/years_product_list.asp"><img src="/top_menu/top_menu_img/menu_3.gif"></a></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	</table>	
+	</td>
+</tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="25px" bgcolor="#dfdfdf" style="margin-bottom: 2px;">
+<tr>
+	<td style="width:70px;">
+	 <table border="0" cellspacing="0" cellpadding="0">
+	   <td width="10"><img src="/top_menu/top_menu_img/icon_top.gif" style="vertical-align: middle;"></td>
+	   <td style="vertical-align: middle;padding-top:2px;font-size:11px " width="80" align="center"><font color="#484848">인기검색어</font></td>
+	   <tr>
+	 </table>
+	</td>
+	<td style="width:110px"><!-- <iframe scrolling="no" frameborder="0" width="100%" height="18" align="left" marginwidth="0" marginheight="0" vspace="0" src="/include/search_top_scroll_ifrm.asp"></iframe> -->
+										<div class="search_slideshow" style="display:none;background-color:#dfdfdf;">
+										
+<a href="/product/product_search.asp?dbup=no&search_name=32" target="_parent" style="width:100%"><span style="padding:5px; background: url(/images/bg/search_no_icon0.gif) no-repeat;color:white;background: url(/images/bg/search_no_icon0.gif) no-repeat;color:white; font-size:9pt" class='notice'>1</span> <span style="font-size:9pt;color:#666; font-weight: normal;">32</span></a>
+
+<a href="/product/product_search.asp?dbup=no&search_name=ROTO" target="_parent" style="width:100%"><span style="padding:5px; background: url(/images/bg/search_no_icon0.gif) no-repeat;color:white;background: url(/images/bg/search_no_icon0.gif) no-repeat;color:white; font-size:9pt" class='notice'>2</span> <span style="font-size:9pt;color:#666; font-weight: normal;">ROTO</span></a>
+
+<a href="/product/product_search.asp?dbup=no&search_name=4MM" target="_parent" style="width:100%"><span style="padding:5px; background: url(/images/bg/search_no_icon0.gif) no-repeat;color:white;background: url(/images/bg/search_no_icon0.gif) no-repeat;color:white; font-size:9pt" class='notice'>3</span> <span style="font-size:9pt;color:#666; font-weight: normal;">4MM</span></a>
+
+<a href="/product/product_search.asp?dbup=no&search_name=031" target="_parent" style="width:100%"><span style="padding:5px; background: url(/images/bg/search_no_icon0.gif) no-repeat;color:white;background: url(/images/bg/search_no_icon0.gif) no-repeat;color:white; font-size:9pt" class='notice'>4</span> <span style="font-size:9pt;color:#666; font-weight: normal;">031</span></a>
+
+<a href="/product/product_search.asp?dbup=no&search_name=500" target="_parent" style="width:100%"><span style="padding:5px; background: url(/images/bg/search_no_icon0.gif) no-repeat;color:white;background: url(/images/bg/search_no_icon0.gif) no-repeat;color:white; font-size:9pt" class='notice'>5</span> <span style="font-size:9pt;color:#666; font-weight: normal;">500</span></a>
+
+										</div>		
+																	  
+	</td>
+	<td style="width:215px;">
+	<form name="search_frm_cat" method="post">
+		<input type="hidden" name="search_code1" value="9">
+	 <table border="0" cellspacing="0" cellpadding="0">
+	   <td width="10"><img src="/top_menu/top_menu_img/icon_top.gif" style="vertical-align: middle"></td>
+	   <td style="vertical-align: middle;padding-top:2px;font-size:11px ;">카테고리</td>
+	   
+	   <td style="vertical-align: middle"><input type="text" name="search_name" class="search_title" value=""  AUTOCOMPLETE="off" onkeypress="if (window.event.keyCode == 13) search_main_cat_();" style="width:100px"></td>
+	   <td><img src="/top_menu/top_menu_img/top_main_s_icon.gif" onclick="javascript:search_main_cat_();" class="pointer"></td>
+	   <tr>
+	  </table>	
+	  </form>
+	</td>
+	<td width="280">
+	<form name="search_frm" method="post">
+		<table width="100%" height="20" border="0" cellspacing="0" cellpadding="0">
+		 <tr>
+		   <td width="90px;" >
+			   <select id="select_id" name="search_code1" style="width:90px;">
+				<option value="0" >-통합검색-</option>
+				<option value="1" >상품검색</option>
+				<!-- <option value="9" >카테고리검색</option> -->
+				<option value="2" >중고매장검색</option>
+				<option value="3" >직거래장터검색</option>
+				<option value="4" >A/S상품검색</option>
+				<option value="5" >게시물검색</option>
+				<option value="6" >상품메뉴얼검색</option>
+				<option value="7" >동영상</option>
+				<option value="8" >Today's TIP</option>
+			  </select>
+		   </td>
+		   <td style="padding-left:1px;">
+		   
+		     <script LANGUAGE="JavaScript" src="/js/XRS.js"></script>
+		   
+						 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+						  <tr>
+							 <td width="100%">
+							 
+							    <input type="text" id="txt1" onkeyup="showHint(this.value);" onkeydown="keycheck1();" tabindex="1" name="search_name" class="search_title" value=""  AUTOCOMPLETE="off" onkeypress="if (window.event.keyCode == 13) search_main();">
+							  </td>
+							  <td><img src="/top_menu/top_menu_img/top_main_s_icon.gif" onclick="javascript:search_main();"  class="pointer"></td>
+							  </tr>
+							  <tr>
+							    <td width="100%" align="left">
+
+								<div id="LayerTblGround1" onmouseout="XmlSearch_Out();" onmouseover="XmlSearch_Over();" style="overflow:auto;display:none;position:absolute;border:1px solid #cccccc;background-color:#FFFFFF;valign:top;table-layout:fixed;z-index:98;width:305px;height:180px;">
+								<span id="txtHint"></span>
+								</div>
+							</td>
+							</tr>
+						</table>																				   
+		   
+		  
+		   </td>
+		   <!-- <td width="80px;"><img src="/images/button/main_search_icon.gif" onclick="javascript:search_main();" class="pointer"></td> -->
+		 </tr>
+		</table>
+		</form>
+		</td>
+	<td style="width:270px" align="center"><!-- <iframe scrolling="no" frameborder="0" width="90%" height="18" align="center" marginwidth="0" marginheight="0" vspace="0" src="/include/txt_scroll1.asp?code_number=11"></iframe> -->
+							  <div class="slideshow" style="display:none;background-color: #dfdfdf;">
+							  <a href='/center/content_view.asp?content_number=322&gotopage=1&search_code=&search_name=' target='_parent' style='text-decoration:none;letter-spacing:-1px;width:100%;'><span style='color:#000000;'>알파모형의 새로운 이름 스카이하비 </span></a>
+<a href='/center/content_view.asp?content_number=323&gotopage=1&search_code=&search_name=' target='_parent' style='text-decoration:none;letter-spacing:-1px;width:100%;'><span style='color:#000000;'>30만원이상 구매시 4% 추가할인 </span></a>
+
+							  </div>	
+	
+	</td>
+
+</tr>
+</table>
+
+
+<div id="contentwrapper"><!-- contentwrapper START -->
+	<div id="contentcolumn_Left"><!-- contentcolumn START -->
+
+
+
+
+
+
+
+
+<!---탑부분 이미지 타이틀-->
+<TABLE width='0' cellSpacing='0' cellPadding='0' border='0'><tr height='1'><td></td></tr></table><table width='100%' border='0' cellspacing='0' cellpadding='0' align='center' height='50'  background='/images/title/s_title.jpg'>  <tr>     <td width='50%' style='padding-left:30px;'><span style='font-size:18px; margin:0px; color:#383d32; font-weight: bold;letter-spacing:-1px;'>[X]Microsoft SQL Server 2008 R2 ([XX]</span></td>    <td width='50%'>       <table width='100%' border='0' cellspacing='0' cellpadding='0'>          <tr>             <td width='100%' align='right' height='30' style='padding-right:20px;' valign='bottom' class='ssubject'><img src='/images/icon/square01_gray.gif'> 홈 > 상품카테고리</td>          </tr>          <tr>              <td width='100%' align='left' height='20' style='padding-left:200px;' valign='top'><font color='#0C1F76'></font></td>          </tr>       </table>  </td>  </tr></table><TABLE width='0' cellSpacing='0' cellPadding='0' border='0'><tr height='2'><td></td></tr></table>
+<!---탑부분 이미지 타이틀 끝-->
+
+
+	  
+
+
+
+<!---- 2차 카테고리 배너보이기 ---------->
+ <font face="Arial" size=2>
+<p>Microsoft OLE DB Provider for SQL Server</font> <font face="Arial" size=2>오류 '80040e14'</font>
+<p>
+<font face="Arial" size=2>UNION, INTERSECT 또는 EXCEPT 연산자를 사용하여 결합된 모든 쿼리의 대상 목록에는 동일한 개수의 식이 있어야 합니다.</font>
+<p>
+<font face="Arial" size=2>/product/product_banner_inc.asp</font><font face="Arial" size=2>, 줄 7</font> 
