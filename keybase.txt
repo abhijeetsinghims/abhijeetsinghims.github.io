@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/abhijeet_singh
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://abhijeetsinghims.github.io
+  * I am abhijeet_singh (https://keybase.io/abhijeet_singh) on keybase.
+  * I have a public key with fingerprint EAF1 4BE0 BBD4 8D08 FC20  6972 1C58 ACC0 FF28 6EB1
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01012093f71652bf092823cd8fb0cc5f77ef2d07946056f57a8df1807910520db6f10a",
+      "fingerprint": "eaf14be0bbd48d08fc2069721c58acc0ff286eb1",
+      "host": "keybase.io",
+      "key_id": "1c58acc0ff286eb1",
+      "kid": "01012093f71652bf092823cd8fb0cc5f77ef2d07946056f57a8df1807910520db6f10a",
+      "uid": "30356a8c742e13333648da1734092219",
+      "username": "abhijeet_singh"
+    },
+    "service": {
+      "hostname": "abhijeetsinghims.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1561047349,
+  "expire_in": 157680000,
+  "prev": "aff053858d11b04eaaf8177cf2e8a52663862c2c65cd3546f2b0255934ab3b66",
+  "seqno": 9,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.0
+Comment: https://keybase.io/crypto
+
+yMIvAnicrVJbSBVBGD6WqdkFiQoppVqqYyk2M7szu+dUcKCrTyVkRB077OzOnLNe
+zp5215NWVtRLoPVQUdnFB09YZhC99JAJXSSILJSEeihKIqKwSOwCQZdZq5fosf9l
+mH++7/u/b/j7pk0M5Ge1FGVOzuw5E8m6f6u7IVA95SreLVHbbJLCu6VaNn6wOpO5
+XqzWMqWwBCCACIRkrkKCEeUghDQkG6bGKTAMzFWVcWQCNaQQgAnHqq6ZHGqiAQFG
+wKSEQ6BLZRK3knHmpBwr6QlZpnOoUAYoNRXNBBo3ECAhFUEDa7phAM6RRhiFgpiw
+XZ8hzFHdZeWWLXriEhu39w/8f/bdMC4nAxkTXTNUBTEoiyLCtg5VWRHCCIZ8oMuc
+pF7PBFqnCauGMS/mitAJqblMEm9py2D+9/p5/sKNw6x6tzxueYkG+itjyrE927Dr
+BC7heSk37Ot4TSmfuJPR2G/JGLWSpuALRpo5rmUnpTAUSMOz/BkQEwgU4TNUJrHG
+lOWwmOUjsEo0IMqfw9K+F84BljWsmRBSoDBd5xpUVYMjpukYESJrBBnIINgwZawQ
+jihAGIdkRacyJUTyQ+5I2lJYTPL0uJB0rXhS9xocJjXfvhnNDmTlB3ImTfB3LpA/
+ueDPJnrvcr+rVd9zPndtelHYeKon+G6kb93b7jv1X5t/7BpZPXY4c5Y8L11/eo2z
+qGvjObnyweqxe6s+TOofvvzNSs88U1zd/zEytHUbORoduz6rMJoIfnybE5x/vWpZ
+39wtbUsePrphelPfT+240rsC5V0sbt8QN18ebz1Ysf/1wulXFj1r1Z1deZEL8eVG
+x5HKoYHHgebcL0NjmwLzps9u+xytLkmbuYPlnRd6js4ZXomD7XZlZumhFnNxQdHg
+lpo9156UfaqtLN6eXTTQ+2ZaruaURo5trmqENSXK2miv3ZJ6NTrc1Bq5258ZLbn2
+tLt0b/uM+n0jqxoz59Vlg0X3R04s6GyLHagIXvoJHHVCAQ==
+=FD18
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/abhijeet_singh
+
+==================================================================
