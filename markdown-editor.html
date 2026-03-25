@@ -1,0 +1,524 @@
+---
+layout: default
+title: Markdown Editor
+---
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/styles/github.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+
+<div class="md-editor-shell" id="mdEditorApp">
+  <div class="editor-toolbar" role="toolbar" aria-label="Markdown editor toolbar">
+    <div class="toolbar-group">
+      <button type="button" data-wrap="**" title="Bold (Ctrl/Cmd+B)"><strong>B</strong></button>
+      <button type="button" data-wrap="*" title="Italic (Ctrl/Cmd+I)"><em>I</em></button>
+      <button type="button" data-prefix="# " title="Heading">H1</button>
+      <button type="button" data-prefix="## " title="Subheading">H2</button>
+      <button type="button" data-prefix="> " title="Blockquote">❝</button>
+      <button type="button" data-wrap="`" title="Inline code">&lt;/&gt;</button>
+      <button type="button" data-block="```\n$SELECTION\n```" title="Code block">Code</button>
+      <button type="button" data-block="- [ ] $SELECTION" title="Task list">Task</button>
+      <button type="button" data-block="| Col 1 | Col 2 |\n| --- | --- |\n| Val 1 | Val 2 |" title="Insert table">Table</button>
+      <button type="button" data-block="```mermaid\nflowchart TD\n  A[Start] --> B[Done]\n```" title="Insert Mermaid diagram">Mermaid</button>
+      <button type="button" data-block="$$\nE = mc^2\n$$" title="Insert Math (KaTeX)">Math</button>
+      <button type="button" data-block="---" title="Horizontal rule">Rule</button>
+      <button type="button" data-link title="Insert link">Link</button>
+      <button type="button" data-image title="Insert image">Image</button>
+    </div>
+
+    <div class="toolbar-group">
+      <button type="button" id="importBtn" title="Import .md file">Import</button>
+      <input id="fileInput" type="file" accept=".md,.markdown,.txt" hidden />
+      <button type="button" id="exportMdBtn" title="Download markdown">Export MD</button>
+      <button type="button" id="exportHtmlBtn" title="Download HTML">Export HTML</button>
+      <button type="button" id="printPdfBtn" title="Print / Save as PDF">Export PDF</button>
+      <button type="button" id="themeBtn" title="Toggle dark mode">Theme</button>
+      <button type="button" id="modeBtn" title="Change layout mode">Mode</button>
+      <button type="button" id="focusBtn" title="Focus mode">Focus</button>
+      <button type="button" id="clearBtn" title="Clear content">Clear</button>
+    </div>
+  </div>
+
+  <div class="editor-body" id="editorBody">
+    <section class="pane pane-editor">
+      <label for="markdownInput" class="pane-title">Markdown</label>
+      <textarea id="markdownInput" spellcheck="false" aria-label="Markdown input"></textarea>
+    </section>
+
+    <section class="pane pane-preview">
+      <div class="pane-header">
+        <span class="pane-title">Preview</span>
+        <span id="saveState" class="save-state" aria-live="polite">Saved</span>
+      </div>
+      <article id="preview" class="preview markdown-body"></article>
+    </section>
+
+    <aside class="pane pane-outline">
+      <h3 class="pane-title">Outline</h3>
+      <nav id="outline"></nav>
+      <div class="stats" id="stats"></div>
+    </aside>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@15.0.12/lib/marked.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/lib/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+
+<style>
+  .md-editor-shell {
+    border: 1px solid #d6d8dc;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  .editor-toolbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    padding: 0.75rem;
+    border-bottom: 1px solid #eceff3;
+    background: #f8fafc;
+  }
+
+  .toolbar-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .editor-toolbar button {
+    border: 1px solid #cfd4db;
+    border-radius: 8px;
+    background: #fff;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .editor-toolbar button:hover {
+    background: #eaf2ff;
+    border-color: #98b4ff;
+  }
+
+  .editor-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 260px;
+    min-height: 72vh;
+  }
+
+  .pane {
+    border-right: 1px solid #eef1f5;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .pane:last-child {
+    border-right: none;
+  }
+
+  .pane-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #5e6a7a;
+    margin: 0;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #eef1f5;
+    font-weight: 700;
+  }
+
+  #markdownInput {
+    flex: 1;
+    border: none;
+    padding: 1rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    resize: none;
+    outline: none;
+  }
+
+  .pane-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eef1f5;
+  }
+
+  .save-state {
+    padding-right: 1rem;
+    font-size: 0.8rem;
+    color: #5e6a7a;
+  }
+
+  .preview {
+    padding: 1rem 1.2rem 2rem;
+    overflow: auto;
+    max-height: 72vh;
+  }
+
+  .preview pre {
+    border-radius: 8px;
+    padding: 0.9rem;
+    overflow-x: auto;
+  }
+
+  .pane-outline {
+    background: #fafbfd;
+  }
+
+  #outline {
+    overflow: auto;
+    padding: 0.5rem 1rem;
+    max-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  #outline a {
+    color: #2f5dd8;
+    font-size: 0.9rem;
+    text-decoration: none;
+    padding: 0.2rem 0;
+  }
+
+  #outline a[data-level="2"] { margin-left: 0.7rem; }
+  #outline a[data-level="3"] { margin-left: 1.4rem; }
+  #outline a[data-level="4"] { margin-left: 2.1rem; }
+
+  .stats {
+    margin-top: auto;
+    border-top: 1px solid #eef1f5;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    color: #5e6a7a;
+    line-height: 1.6;
+  }
+
+  .mode-preview .pane-editor,
+  .mode-preview .pane-outline {
+    display: none;
+  }
+
+  .mode-preview .editor-body {
+    grid-template-columns: 1fr;
+  }
+
+  .mode-editor .pane-preview,
+  .mode-editor .pane-outline {
+    display: none;
+  }
+
+  .mode-editor .editor-body {
+    grid-template-columns: 1fr;
+  }
+
+  .focus .pane-outline,
+  .focus .editor-toolbar {
+    display: none;
+  }
+
+  .focus .editor-body {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .theme-dark .md-editor-shell {
+    background: #0f172a;
+    border-color: #1e293b;
+    color: #e2e8f0;
+  }
+
+  .theme-dark .editor-toolbar,
+  .theme-dark .pane-outline {
+    background: #0b1225;
+    border-color: #1e293b;
+  }
+
+  .theme-dark .pane,
+  .theme-dark .pane-title,
+  .theme-dark .pane-header,
+  .theme-dark .stats {
+    border-color: #1e293b;
+    color: #c9d3e3;
+  }
+
+  .theme-dark #markdownInput {
+    background: #0f172a;
+    color: #e2e8f0;
+  }
+
+  .theme-dark .preview {
+    background: #111827;
+    color: #f3f4f6;
+  }
+
+  .theme-dark .editor-toolbar button {
+    background: #111827;
+    color: #e5e7eb;
+    border-color: #334155;
+  }
+
+  @media (max-width: 1080px) {
+    .editor-body {
+      grid-template-columns: 1fr;
+    }
+
+    .pane-outline {
+      max-height: 260px;
+    }
+
+    .preview {
+      max-height: 48vh;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    const STORAGE_KEY = 'markdown-editor-content-v1';
+    const STATE_KEY = 'markdown-editor-ui-state-v1';
+
+    const app = document.getElementById('mdEditorApp');
+    const input = document.getElementById('markdownInput');
+    const preview = document.getElementById('preview');
+    const outline = document.getElementById('outline');
+    const stats = document.getElementById('stats');
+    const saveState = document.getElementById('saveState');
+    const fileInput = document.getElementById('fileInput');
+
+    const defaultContent = `# Welcome to your Markdown Studio\n\nThis editor supports:\n\n- **Live preview**\n- GitHub-flavored markdown (tables, task lists, fenced code)\n- \`mermaid\` diagrams\n- Math with KaTeX using \`$...$\` or \`$$...$$\`\n- Autosave + import/export\n\n## Quick shortcuts\n\n- Ctrl/Cmd + B: bold\n- Ctrl/Cmd + I: italic\n- Ctrl/Cmd + K: insert link\n\n\`\`\`js\nconsole.log('Happy writing!');\n\`\`\``;
+
+    let saveTimer;
+    let mode = 'split';
+
+    marked.setOptions({
+      gfm: true,
+      breaks: true,
+      highlight(code, language) {
+        if (language && hljs.getLanguage(language)) {
+          return hljs.highlight(code, { language }).value;
+        }
+        return hljs.highlightAuto(code).value;
+      }
+    });
+
+    const renderer = new marked.Renderer();
+    renderer.code = ({ text, lang }) => {
+      if ((lang || '').toLowerCase() === 'mermaid') {
+        return `<pre class="mermaid">${text}</pre>`;
+      }
+      const className = lang ? `language-${lang}` : '';
+      return `<pre><code class="hljs ${className}">${hljs.highlightAuto(text).value}</code></pre>`;
+    };
+
+    function slugify(text) {
+      return text.toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-');
+    }
+
+    function updateOutline() {
+      outline.innerHTML = '';
+      preview.querySelectorAll('h1, h2, h3, h4').forEach((heading) => {
+        const id = heading.id || slugify(heading.textContent);
+        heading.id = id;
+        const link = document.createElement('a');
+        link.href = `#${id}`;
+        link.textContent = heading.textContent;
+        link.dataset.level = heading.tagName.substring(1);
+        outline.appendChild(link);
+      });
+      if (!outline.children.length) {
+        outline.innerHTML = '<small>No headings yet.</small>';
+      }
+    }
+
+    function updateStats(text) {
+      const words = (text.trim().match(/\S+/g) || []).length;
+      const chars = text.length;
+      const lines = text.split('\n').length;
+      const reading = Math.max(1, Math.round(words / 200));
+      stats.innerHTML = `Words: <strong>${words}</strong><br>Characters: <strong>${chars}</strong><br>Lines: <strong>${lines}</strong><br>Reading time: <strong>${reading} min</strong>`;
+    }
+
+    async function render() {
+      const markdown = input.value;
+      const rawHtml = await marked.parse(markdown, { renderer });
+      preview.innerHTML = DOMPurify.sanitize(rawHtml);
+      updateOutline();
+      updateStats(markdown);
+
+      if (window.renderMathInElement) {
+        renderMathInElement(preview, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$', right: '$', display: false }
+          ],
+          throwOnError: false
+        });
+      }
+
+      if (window.mermaid) {
+        mermaid.initialize({ startOnLoad: false, theme: document.body.classList.contains('theme-dark') ? 'dark' : 'default' });
+        mermaid.run({ nodes: preview.querySelectorAll('.mermaid') });
+      }
+    }
+
+    function save() {
+      localStorage.setItem(STORAGE_KEY, input.value);
+      localStorage.setItem(STATE_KEY, JSON.stringify({ mode, dark: document.body.classList.contains('theme-dark'), focus: app.classList.contains('focus') }));
+      saveState.textContent = 'Saved';
+    }
+
+    function saveSoon() {
+      saveState.textContent = 'Saving...';
+      clearTimeout(saveTimer);
+      saveTimer = setTimeout(save, 250);
+    }
+
+    function replaceSelection(transformer) {
+      const start = input.selectionStart;
+      const end = input.selectionEnd;
+      const selected = input.value.slice(start, end) || 'text';
+      const replaced = transformer(selected);
+      input.setRangeText(replaced, start, end, 'end');
+      input.focus();
+      render();
+      saveSoon();
+    }
+
+    function setMode(nextMode) {
+      app.classList.remove('mode-preview', 'mode-editor');
+      mode = nextMode;
+      if (nextMode === 'preview') app.classList.add('mode-preview');
+      if (nextMode === 'editor') app.classList.add('mode-editor');
+      save();
+    }
+
+    app.querySelectorAll('[data-wrap]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const token = button.dataset.wrap;
+        replaceSelection((text) => `${token}${text}${token}`);
+      });
+    });
+
+    app.querySelectorAll('[data-prefix]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const prefix = button.dataset.prefix;
+        replaceSelection((text) => `${prefix}${text}`);
+      });
+    });
+
+    app.querySelectorAll('[data-block]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const template = button.dataset.block;
+        replaceSelection((text) => template.replace('$SELECTION', text));
+      });
+    });
+
+    document.querySelector('[data-link]').addEventListener('click', () => {
+      replaceSelection((text) => `[${text}](https://example.com)`);
+    });
+
+    document.querySelector('[data-image]').addEventListener('click', () => {
+      replaceSelection((text) => `![${text}](https://images.unsplash.com/photo-1500530855697-b586d89ba3ee)`);
+    });
+
+    document.getElementById('importBtn').addEventListener('click', () => fileInput.click());
+    fileInput.addEventListener('change', async (event) => {
+      const file = event.target.files[0];
+      if (!file) return;
+      input.value = await file.text();
+      render();
+      save();
+    });
+
+    document.getElementById('exportMdBtn').addEventListener('click', () => {
+      const blob = new Blob([input.value], { type: 'text/markdown;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'document.md';
+      link.click();
+      URL.revokeObjectURL(url);
+    });
+
+    document.getElementById('exportHtmlBtn').addEventListener('click', () => {
+      const blob = new Blob([`<!doctype html><html><head><meta charset="utf-8"><title>Export</title></head><body>${preview.innerHTML}</body></html>`], { type: 'text/html;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'document.html';
+      link.click();
+      URL.revokeObjectURL(url);
+    });
+
+    document.getElementById('printPdfBtn').addEventListener('click', () => window.print());
+
+    document.getElementById('themeBtn').addEventListener('click', () => {
+      document.body.classList.toggle('theme-dark');
+      render();
+      save();
+    });
+
+    document.getElementById('modeBtn').addEventListener('click', () => {
+      if (mode === 'split') setMode('preview');
+      else if (mode === 'preview') setMode('editor');
+      else setMode('split');
+    });
+
+    document.getElementById('focusBtn').addEventListener('click', () => {
+      app.classList.toggle('focus');
+      save();
+    });
+
+    document.getElementById('clearBtn').addEventListener('click', () => {
+      if (confirm('Clear the current document?')) {
+        input.value = '';
+        render();
+        save();
+      }
+    });
+
+    input.addEventListener('input', () => {
+      render();
+      saveSoon();
+    });
+
+    input.addEventListener('keydown', (event) => {
+      const mod = event.metaKey || event.ctrlKey;
+      if (!mod) return;
+      if (event.key.toLowerCase() === 'b') {
+        event.preventDefault();
+        replaceSelection((text) => `**${text}**`);
+      }
+      if (event.key.toLowerCase() === 'i') {
+        event.preventDefault();
+        replaceSelection((text) => `*${text}*`);
+      }
+      if (event.key.toLowerCase() === 'k') {
+        event.preventDefault();
+        replaceSelection((text) => `[${text}](https://example.com)`);
+      }
+    });
+
+    const saved = localStorage.getItem(STORAGE_KEY);
+    const uiState = JSON.parse(localStorage.getItem(STATE_KEY) || '{}');
+    input.value = saved || defaultContent;
+
+    if (uiState.dark) document.body.classList.add('theme-dark');
+    if (uiState.focus) app.classList.add('focus');
+    if (uiState.mode) setMode(uiState.mode);
+
+    render();
+    save();
+  })();
+</script>
